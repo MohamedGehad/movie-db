@@ -1,0 +1,90 @@
+          
+
+               
+
+          
+          
+          
+          
+          
+          
+          
+          
+                <div   class="container">
+                        <div  *ngIf  ='isLodaing == true' class="row ">
+                        <div class="col-lg-9">
+                            <h1 class="py-5">MOVIES</h1>
+
+                            <div class="movieinfo   py-5"><img [src]="imgPrefix+MovieDetails.backdrop_path"></div>
+
+
+                            
+                            <div class="MovieDetails">
+
+                                <h3 class="pt-5 gree font-weight-bold">{{MovieDetails.original_title}}</h3>
+                                <p  class="py-5">{{MovieDetails.overview}}</p>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-md-6  Movi  ">
+                                <h4>Original Release</h4>
+                                 <span>{{MovieDetails.release_date}}</span>
+                            </div>
+
+                            <div class="col-md-6  Movi  ">
+                                <h4>Running Time                                </h4>
+                                 <span>{{MovieDetails.runtime}} mins</span>
+                            </div>
+
+
+                            <div class="col-md-6  Movi  ">
+                                <h4>Budget</h4>
+                                 <span>{{MovieDetails.budget}}</span>
+                            </div>
+
+
+
+                            <div class="col-md-6  Movi  ">
+                                <h4>Voting Average </h4>
+                                 <span>{{MovieDetails.vote_average}} %</span>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+
+
+
+                        <div class="col-md-3 col-lg-3 col-sm-3 ">
+                            <h1 class="py-5">TOP TEN</h1>
+
+                            <div *ngFor='let movie of topTrend' class="movieItem movieinfo pt-5">
+                                <img class="w-50" [src]="imgPrefix+movie.poster_path">
+                                <h5 class="py-2">{{movie.title}}</h5>
+                            </div>
+
+                           
+                            </div>
+
+
+                           
+                        </div>
+
+
+
+
+
+
+                        <footer class="Footer__footer___2nhzB"><p>Made by <a href="https://www.linkedin.com/in/mohamed-gehad2798/"><strong>Mohamed Gehad</strong> </a></p><p><a href="https://github.com/mohamedgehad"><span  class="fa fa-github "></span> View code</a></p></footer>
+                    </div>
+
+
+
+
+

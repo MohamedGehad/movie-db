@@ -1,0 +1,59 @@
+        
+        <h2>movie</h2>
+        <div class="container">
+                <div class="row ">
+        
+                    <div *ngFor='let movie  of trendingMovies' class="col-md-3 py-3">
+                        <div class="sub-advisor text-white  overflow-hidden">
+
+                            <a [routerLink] = "['/moviedetails', movie.id]">
+                                
+                        <img [src]="imgPrefix+movie.poster_path" class="w-100"> 
+                        <div  class="overlay  d-flex align-items-center">
+        
+                            <h4 class="pt-5 text-center m-auto">{{movie.title}}</h4>
+                            <div class="info-title">
+                                <h4 class="pt-3 text-center ">{{movie.vote_average}}%</h4>
+                              </div>
+                      
+                        </div>
+        
+                    </a>
+        
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
+        
+        <h2 class="text-center py-5">Tv</h2>
+<div class="container">
+        <div class="row ">
+
+            <div *ngFor='let tv  of trendingTv' class="col-md-3 py-3">
+                <div class="sub-advisor text-white  overflow-hidden">
+
+                    <a [routerLink] = "['/moviedetails', tv.id]">
+
+                <img [src]="imgPrefix+tv.poster_path" class="w-100"> 
+                <div  class="overlay  d-flex align-items-center">
+
+                    <h4 class="pt-5 text-center m-auto">{{tv.name}}</h4>
+                    <div class="info-title">
+                        <h4 class="pt-3 text-center">{{tv.vote_average}}</h4>
+                      </div>
+                </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
